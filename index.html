@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CrossRoads</title>
+</head>
+<body>
+    <h2>Перехрестя</h2>
+    <div>
+        <div id="canvases">
+            <canvas id="road" width="1000" height="800">Canvas</canvas>
+            <canvas id="trafficlights" width="1000" height="800">Canvas</canvas>
+            <canvas id="canvas" width="1000" height="800">Canvas</canvas>
+        </div>
+        <div id="buttons">
+            <button class="way-btn" onclick="callCar('top', 'left')"><img src="./Images/tl.png" alt="tl"></button>
+            <button class="way-btn" onclick="callCar('top', 'bottom')"><img src="./Images/tb.png" alt="tb"></button>
+            <button class="way-btn" onclick="callCar('top', 'right')"><img src="./Images/tr.png" alt="tr"></button>
+            <button class="way-btn" onclick="callCar('right', 'top')"><img src="./Images/rt.png" alt="rt"></button>
+            <button class="way-btn" onclick="callCar('right', 'bottom')"><img src="./Images/rb.png" alt="rb"></button>
+            <button class="way-btn" onclick="callCar('right', 'left')"><img src="./Images/rl.png" alt="rl"></button>
+            <button class="way-btn" onclick="callCar('bottom', 'top')"><img src="./Images/bt.png" alt="bt"></button>
+            <button class="way-btn" onclick="callCar('bottom', 'right')"><img src="./Images/br.png" alt="br"></button>
+            <button class="way-btn" onclick="callCar('bottom', 'left')"><img src="./Images/bl.png" alt="bl"></button>
+            <button class="way-btn" onclick="callCar('left', 'top')"><img src="./Images/lt.png" alt="lt"></button>
+            <button class="way-btn" onclick="callCar('left', 'right')"><img src="./Images/lr.png" alt="lr"></button>
+            <button class="way-btn" onclick="callCar('left', 'bottom')"><img src="./Images/lb.png" alt="lb"></button>
+        </div>
+    </div>
+    <button id="auto">Запустити автоматичну симуляцію</button>
+    <button id="stop">Зупинити спаун машин</button>
+    <div id="tl_range">
+        <label for="tl_speed">Швидкість оновлення світлофора </label>
+        <input id="tl_speed" type="range" min="400" max="1500" step="100" value="1000" onchange="refreshAllTL()">
+        <div id="current_tl_speed">1000</div>
+    </div>
+</body>
+<script src="initialize.js"></script>
+<script src="road.js"></script>
+<script src="trafficlights.js"></script>
+<script src="cars.js"></script>
+<script src="main.js"></script>
+</html>

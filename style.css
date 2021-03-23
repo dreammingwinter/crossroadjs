@@ -1,0 +1,58 @@
+body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+h2 {
+    transform: translate(0px, -80px);
+}
+#canvas, #road, #trafficlights {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    transform: translate(-400px, -90px);
+}
+#canvases {
+    float: left;
+}
+#buttons {
+    float: right;
+    width: 360px;
+    transform: translate(350px, -40px);
+}
+.way-btn {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #0f0;
+    color: #000;
+    border-radius: 20px;
+    outline: none;
+}
+.way-btn:hover, #auto:hover, #stop:hover {
+    transform: scale(1.05);
+}
+.way-btn:active, #auto:active, #stop:active {
+    transform: scale(0.95);
+}
+#auto, #stop {
+    font-size: 16px;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 16px;
+    background-color: #0f0;
+    border: 1px solid #000;
+    margin-top: 30px;
+}
+#tl_range {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+#current_tl_speed {
+    display: inline-block;
+}
